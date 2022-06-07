@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(ellipse at bottom, #285658 5%,#000000 110%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+h1,
+h2 {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+form{
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+h1::before {
+  content: "📧";
+  display: block;
+}
+
+.formulario {
+  width: 100%;
+  max-width: 30rem;
+  font-size: 1.125rem;
+}
+
+.form label,
+.form input,
+.form textarea,
+.form button {
+  display: block;
+  width: 100%;
+}
+
+.form label {
+  color: #fff;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.form input,
+.form textarea {
+  font: inherit;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: border-color, box-shadow 0.2s;
+}
+
+.form textarea {
+  min-height: 10rem;
+  resize: none;
+}
+
+.form input:after,
+.form input:focus,
+.form textarea:after,
+.form textarea:focus {
+  outline: none;
+  border-color: rgb(1, 163, 233);
+  box-shadow: 0 0 0 3px #479a9e;
+}
+
+.form button {
+  display: block;
+  padding: 1rem;
+  margin-top: 10px;
+  background: #8e8e8e;
+  color: #000000;
+  font: inherit;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  text-decoration: none;
+}
+
+.form button:hover{
+  background-color: rgba(0, 179, 255, 0.589);
+}
+
+.voltar{
+  position: absolute;
+  left: 0.4%;
+  top: 1%;
+}
+
+@keyframes fade{
+  from{
+      opacity: 0;
+      transform: scale(0.2);
+  }
+  to{
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+h1::after{
+  content: '|';
+  opacity: 1;
+  animation: pisca .7s infinite;
+}
+
+@keyframes pisca{
+  0%{
+      opacity: 1;
+  }
+  50%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+  } 
+}
